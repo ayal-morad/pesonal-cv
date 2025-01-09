@@ -7,8 +7,12 @@ export const lightTheme = createTheme({
     primary: {
       main: colors.blue[400],
     },
+    secondary: {
+      main: colors.gray[800],
+    },
     background: {
       default: colors.white,
+      paper: "rgba(39, 165, 221, 0.8)",
     },
   },
 });
