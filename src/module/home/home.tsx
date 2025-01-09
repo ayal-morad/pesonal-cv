@@ -1,6 +1,6 @@
 import { TopAppBar } from "../../components";
 import { useThemeStore } from "../../theme";
-import PersonalProfile from "./components/personalProfile";
+import { PersonalProfile, Services, Contact } from "./components";
 
 export function Home() {
   const { theme } = useThemeStore();
@@ -18,6 +18,8 @@ export function Home() {
     >
       <TopAppBar />
       <PersonalProfile />
+      <Services />
+      <Contact />
     </div>
   );
 }

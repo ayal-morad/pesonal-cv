@@ -12,7 +12,7 @@ export function TopAppBar() {
       <AppBar position="static" sx={{ background: "transparent" }}>
         <Toolbar className="gap-4">
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            {`<AM/>`}
+            {`<AM />`}
           </Typography>
 
           <Typography variant="h6" component="div">
