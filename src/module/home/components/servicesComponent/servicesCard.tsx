@@ -1,16 +1,23 @@
 import { useCallback } from "react";
+import { Box, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { ServicesPages } from "./types";
 
 export function ServicesCard({
   serviceName,
   imagePath,
+  service,
 }: {
   serviceName: string;
   imagePath: string;
+  service: ServicesPages;
 }) {
+  const navigate = useNavigate();
+
   const handleClick = useCallback(() => {
     // handle the click event
-    alert("clicked : " + serviceName);
-  }, []);
+    navigate("/services/" + service);
+  }, [service]);
 
   return (
     <div
@@ -22,9 +29,12 @@ export function ServicesCard({
         alt="programingServicePhoto"
         className="w-full h-full object-cover rounded-t-lg"
       />
-      <div className="flex justify-center items-center bg-white rounded-b-lg">
-        <h1>{serviceName}</h1>
-      </div>
+      <Box
+        className="flex justify-center items-center rounded-b-lg"
+        bgcolor="secondary.main"
+      >
+        <Typography color="text.secondary">{serviceName}</Typography>
+      </Box>
     </div>
   );
 }

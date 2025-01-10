@@ -14,5 +14,9 @@ export const lightTheme = createTheme({
       default: colors.white,
       paper: "rgba(39, 165, 221, 0.8)",
     },
+    text: {
+      primary: colors.gray[800],
+      secondary: colors.gray[200],
+    },
   },
 });

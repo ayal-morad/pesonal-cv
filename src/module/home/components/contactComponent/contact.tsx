@@ -36,22 +36,30 @@ export function Contact() {
       }}
       className="w-fulll border-t-2"
     >
-      <div className="flex flex-row items-center justify-between p-4">
+      <div className="flex flex-col items-center justify-between p-4 md:flex-row">
         <div className="w-1/6" />
 
         {/* my logo */}
-        <div className="flex flex-col items-center justify-center">
-          <Typography variant="h4" color="secondary">
+        <div className="flex flex-row items-center justify-center md:flex-col">
+          <Typography
+            variant="h4"
+            color="secondary"
+            className="hidden lg:block"
+          >
             {"<AM />"}
           </Typography>
-          <Typography variant="caption" color="secondary">
+          <Typography
+            variant="caption"
+            color="secondary"
+            className="hidden lg:block"
+          >
             open to work
           </Typography>
         </div>
 
         {/* phone number information */}
         <div
-          className="flex flex-col items-start justify-center cursor-pointer"
+          className="flex flex-row items-center jucenter gap-2 cursor-pointer md:flex-col  md:items-start"
           onClick={handleCopyPhoneNumber}
         >
           <Typography variant="h6" color="secondary">
@@ -65,7 +73,7 @@ export function Contact() {
 
         {/* email information */}
         <div
-          className="flex flex-col items-start justify-center cursor-pointer"
+          className="flex flex-row items-center justify-center gap-2 cursor-pointer md:flex-col  md:items-start"
           onClick={handleCopyEmail}
         >
           <Typography variant="h6" color="secondary">
@@ -78,7 +86,7 @@ export function Contact() {
         </div>
 
         {/* address information */}
-        <div className="flex flex-col items-start justify-center">
+        <div className="flex flex-row items-center justify-center gap-2 md:flex-col md:items-start">
           <Typography variant="h6" color="secondary">
             Address
           </Typography>

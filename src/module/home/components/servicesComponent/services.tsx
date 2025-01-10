@@ -11,6 +11,7 @@ import mobileApplicationServicePhoto from "../../../../assets/mobile application
 import serverApplicationServicePhoto from "../../../../assets/server application service.webp";
 import databaseManigmentServicePhoto from "../../../../assets/databae service.png";
 import qaTestingServicePhoto from "../../../../assets/qa testing.png";
+import { ServicesPages } from "./types";
 
 export function Services() {
   const { theme } = useThemeStore();
@@ -26,7 +27,7 @@ export function Services() {
         borderColor: theme.palette?.background?.paper ?? "black",
         backgroundColor: theme.palette?.background?.default ?? "white",
       }}
-      className="w-fulll border-t-2"
+      className="w-full flex-1  border-t-2"
     >
       {/* services title */}
       <Title title="Services" />
@@ -40,18 +41,21 @@ export function Services() {
       {/* service line 1 */}
       <div className="flex flex-row">
         <div className="w-1/4" />
-        <div className="flex flex-row justify-between items-center w-full gap-2">
+        <div className="flex flex-col justify-between items-center w-full gap-2 md:flex-row">
           <ServicesCard
             serviceName="programing"
             imagePath={programingServicePhoto}
+            service={ServicesPages.PROGRAMING}
           />
           <ServicesCard
             serviceName="web application"
             imagePath={webApplicationServicePhoto}
+            service={ServicesPages.WEBSITE}
           />
           <ServicesCard
             serviceName="mobile application"
             imagePath={mobileApplicationServicePhoto}
+            service={ServicesPages.MOBILE}
           />
         </div>
         <div className="w-1/4" />
@@ -60,18 +64,21 @@ export function Services() {
       {/* service line 2 */}
       <div className="flex flex-row mt-4">
         <div className="w-1/4" />
-        <div className="flex flex-row justify-between items-center w-full gap-2">
+        <div className="flex flex-col justify-between items-center w-full gap-2 md:flex-row">
           <ServicesCard
             serviceName="server application"
             imagePath={serverApplicationServicePhoto}
+            service={ServicesPages.SERVER}
           />
           <ServicesCard
             serviceName="database manigment"
             imagePath={databaseManigmentServicePhoto}
+            service={ServicesPages.DATABASE}
           />
           <ServicesCard
             serviceName="QA testing"
             imagePath={qaTestingServicePhoto}
+            service={ServicesPages.QA}
           />
         </div>
         <div className="w-1/4" />

@@ -1,8 +1,9 @@
 import { TopAppBar } from "../../components";
 import { useThemeStore } from "../../theme";
-import { PersonalProfile, Services, Contact } from "./components";
+import { Contact } from "../home";
+import { AboutSpeatch } from "./components";
 
-export function Home() {
+export function About() {
   const { theme } = useThemeStore();
 
   return (
@@ -14,11 +15,10 @@ export function Home() {
         backgroundPosition: "top right",
         backgroundSize: "350px 350px",
       }}
-      className="flex flex-col h-screen lg:h-full"
+      className="flex flex-col h-screen"
     >
       <TopAppBar />
-      <PersonalProfile />
-      <Services />
+      <AboutSpeatch />
       <Contact />
     </div>
   );
