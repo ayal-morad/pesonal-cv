@@ -24,7 +24,7 @@ export function TopAppBar() {
           <Typography
             variant="h6"
             sx={{ flexGrow: 1 }}
-            className="hidden cursor-pointer sm:block"
+            className="cursor-pointer"
             onClick={() => handelNavigation("/")}
           >
             {`<AM />`}
@@ -44,14 +44,6 @@ export function TopAppBar() {
             onClick={() => handelNavigation("/services")}
           >
             services
-          </Typography>
-
-          <Typography
-            variant="h6"
-            className="cursor-pointer"
-            onClick={() => handelNavigation("/projects")}
-          >
-            projects
           </Typography>
 
           <Typography

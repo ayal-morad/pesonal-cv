@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { About } from "./module/about";
 import { Service, Services } from "./module/services";
 import { Home } from "./module/home";
+import { Contact } from "./module/contact";
 
 function App() {
   const { theme } = useThemeStore();
@@ -19,6 +20,7 @@ function App() {
           {/* other pages */}
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
 
           {/* services realated pages */}
           <Route path="/services/:id" element={<Service />} />

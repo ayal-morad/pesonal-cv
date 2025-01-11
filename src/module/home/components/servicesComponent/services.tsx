@@ -25,7 +25,6 @@ export function Services() {
         backgroundSize: "350px 350px",
         borderBottom: `2px`,
         borderColor: theme.palette?.background?.paper ?? "black",
-        backgroundColor: theme.palette?.background?.default ?? "white",
       }}
       className="w-full flex-1  border-t-2"
     >
