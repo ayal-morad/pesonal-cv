@@ -14,7 +14,7 @@ export function Home() {
         backgroundPosition: "top right",
         backgroundSize: "350px 350px",
       }}
-      className="flex flex-col h-screen lg:h-full"
+      className="flex flex-col h-full"
     >
       <TopAppBar />
       <PersonalProfile />

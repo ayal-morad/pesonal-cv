@@ -14,7 +14,7 @@ export function Services() {
         backgroundPosition: "top right",
         backgroundSize: "350px 350px",
       }}
-      className="flex flex-col h-screen"
+      className="flex flex-col h-full"
     >
       <TopAppBar />
       <ServicesCards />
